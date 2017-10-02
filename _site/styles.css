@@ -1,4 +1,11 @@
+h1 {
+  color: red;
+  font-size: 64px;
+  line-height: 96px;
+  text-decoration: line-through;
+  color: red; }
 
-#blueParagraph{
-  color: blue;
-}
+#blueParagraph {
+  font-size: 32px; }
+  #blueParagraph a {
+    text-decoration: none; }
