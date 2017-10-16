@@ -1,0 +1,43 @@
+<html>
+
+
+<svg id="mysvg"></svg>
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+
+<script>
+
+  var svg = d3.select("#mysvg")
+  .attr("width", window.innerWidth)
+  .attr("height", window.innerHeight);
+
+  function draw(dataArray){
+
+
+
+        var circles = svg.selectAll(".dot") /*or selectAll will modify all elecments with given tag. Select will only do 1st "dot" it finds. */
+                         .data(dataArray);
+
+        circles.exit()
+          .transition().duration(1000)
+          .attr("r", 0)
+          .remove();
+
+        var enterCircles = circles.enter().append("circle")
+          .attr("r", 0)
+          .attr("cy", "50")
+          .attr("cx", function(d, index){
+            return 50*(index+1);
+          })
+          .attr("class", "dot");
+
+        circles.merge(enterCircles)
+          .transition().duration(2000)
+          .attr("r", function(d){
+            return d;
+          })
+          .attr("color", "red");
+    }
+  draw([1,2,3,4]);
+</script>
+</html>
