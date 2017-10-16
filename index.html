@@ -56,8 +56,8 @@
 
         var enterCircles = circles.enter().append("circle")
           .attr("r", 0)
-          .attr("cy", "500")
-          .attr("cx", "500")
+          .attr("cy", window.innerHeight/2)
+          .attr("cx", window.innerWidth/2)
           .attr("class", "dot" );
 
         circles.merge(enterCircles)
