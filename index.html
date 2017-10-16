@@ -33,6 +33,11 @@
 
 <script src="https://d3js.org/d3.v4.min.js"></script>
 
+<button id="Boston">Boston</button>
+<button id="Tokyo">Tokyo</button>
+<button id="New York">New York</button>
+<button id="Paris">Paris</button>
+
 <script>
 
   var svg = d3.select("#mysvg")
@@ -67,7 +72,7 @@
 
 
     d3.select('#Boston').on('click', function(){
-      d3.selectAll("svg#mysvg>*").remove()
+      d3.selectAll("svg#mysvg > *").remove()
       draw([5]);
       });
 
@@ -82,16 +87,13 @@
           });
 
           d3.select('#Paris').on('click', function(){
-            d3.selectAll("svg#mysvg>*").remove()
+            d3.selectAll("svg#mysvg >*").remove()
             draw([6]);
             });
 
 </script>
 
-<button id="Boston">Boston</button>
-<button id="Tokyo">Tokyo</button>
-<button id="New York">New York</button>
-<button id="Paris">Paris</button>
+
 
 <footer>
   <h4>Vasyl Kochura | 2017</h4>
