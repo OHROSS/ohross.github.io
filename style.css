@@ -9,6 +9,12 @@ html {
 
 }
 
+#mysvg {
+  align-content: center;
+  margin-right: auto;
+  display: block;}
+
+
 h1 {
   font-family: 'Lato', sans-serif;
   line-height: 160%;

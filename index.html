@@ -29,13 +29,13 @@
 
 
 
-<svg id="mysvg"></svg>
+<svg id="mysvg" align="center"></svg>
 
 <script src="https://d3js.org/d3.v4.min.js"></script>
 
 <button id="Boston">Boston</button>
 <button id="Tokyo">Tokyo</button>
-<button id="New York">New York</button>
+<button id="NewYork">New York</button>
 <button id="Paris">Paris</button>
 
 <script>
@@ -56,18 +56,17 @@
 
         var enterCircles = circles.enter().append("circle")
           .attr("r", 0)
-          .attr("cy", "50")
-          .attr("cx", function(d, index){
-            return 50*(index+1);
-            })
+          .attr("cy", "500")
+          .attr("cx", "500")
           .attr("class", "dot" );
 
         circles.merge(enterCircles)
           .transition().duration(2000)
           .attr("r", function(d){
-            return d;
+            return 10*d;
           })
           .attr("color", "red");
+
     }
 
 
@@ -81,7 +80,7 @@
         draw([8]);
         });
 
-        d3.select('#New York').on('click', function(){
+        d3.select('#NewYork').on('click', function(){
           d3.selectAll("svg#mysvg>*").remove()
           draw([7]);
           });
@@ -99,3 +98,5 @@
   <h4>Vasyl Kochura | 2017</h4>
 
 </footer>
+
+</html>
