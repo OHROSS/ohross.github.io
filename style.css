@@ -8,8 +8,13 @@ html {
   background-size: cover;
 
 }
+#mydiv{
+  text-align: center;
+  align-content: center;
+}
 
 #mysvg {
+  padding-bottom: 30px;
   align-content: center;
   margin-right: auto;
   display: block;}

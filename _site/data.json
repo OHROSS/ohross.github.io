@@ -1,0 +1,15 @@
+[{
+  "country": "usa",
+  "value": 10,
+  "color": "green"
+},
+{
+"country": "mexico",
+"value": 20,
+"color": "red"
+},
+{
+  "country": "canada",
+  "value": 12,
+  "color": "yellow"
+}]

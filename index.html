@@ -22,73 +22,22 @@
 
 
 <h2>
-	 Population of Cities
+
 
 </h2>
 
 
 
 
-<svg id="mysvg" align="center"></svg>
 
 <script src="https://d3js.org/d3.v4.min.js"></script>
-
-<button id="Boston">Boston</button>
-<button id="Tokyo">Tokyo</button>
-<button id="NewYork">New York</button>
-<button id="Paris">Paris</button>
-
 <script>
+  var data= d3.csv("datatest.csv", function(data) {
+  console.log(data[0]);
 
-  var svg = d3.select("#mysvg")
-  .attr("width", window.innerWidth)
-  .attr("height", window.innerHeight);
+  console.log(data);
+});
 
-  function draw(dataArray){
-
-        var circles = svg.selectAll(".dot") /*or selectAll will modify all elecments with given tag. Select will only do 1st "dot" it finds. */
-                         .data(dataArray);
-
-        circles.exit()
-          .transition().duration(1000)
-          .attr("r", 0)
-          .remove();
-
-        var enterCircles = circles.enter().append("circle")
-          .attr("r", 0)
-          .attr("cy", window.innerHeight/2)
-          .attr("cx", window.innerWidth/2)
-          .attr("class", "dot" );
-
-        circles.merge(enterCircles)
-          .transition().duration(2000)
-          .attr("r", function(d){
-            return 10*d;
-          })
-          .attr("color", "red");
-
-    }
-
-
-    d3.select('#Boston').on('click', function(){
-      d3.selectAll("svg#mysvg > *").remove()
-      draw([5]);
-      });
-
-      d3.select('#Tokyo').on('click', function(){
-        d3.selectAll("svg#mysvg>*").remove()
-        draw([8]);
-        });
-
-        d3.select('#NewYork').on('click', function(){
-          d3.selectAll("svg#mysvg>*").remove()
-          draw([7]);
-          });
-
-          d3.select('#Paris').on('click', function(){
-            d3.selectAll("svg#mysvg >*").remove()
-            draw([6]);
-            });
 
 </script>
 

@@ -29,12 +29,12 @@
           .attr("cx", function(d, index){
             return 50*(index+1);
           })
-          .attr("class", "dot");
+          .attr("class", "dot", );
 
         circles.merge(enterCircles)
           .transition().duration(2000)
           .attr("r", function(d){
-            return d;
+            return 5*d;
           })
           .attr("color", "red");
     }
