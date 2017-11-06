@@ -1,0 +1,76 @@
+
+<!doctype html>
+<html class="no-js">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>A Time-Lapse Visualization Of Music Releases Around the World</title>
+
+		<link href="//fonts.googleapis.com/css?family=Lato:400italic,400,300,700" rel="stylesheet" type="text/css">
+		<link href="bower_components/nprogress/nprogress.css" rel="stylesheet" type="text/css">
+		<link href="js/lib/d3-tip/examples/example-styles.css" rel="stylesheet" type="text/css">
+		<link href="musicmap.css" rel="stylesheet" type="text/css">
+
+		<script src="bower_components/modernizr/modernizr.js"></script>
+		<script src="bower_components/requirejs/require.js" data-main="js/app"></script>
+	</head>
+	<body>
+		<aside>
+			<header>
+
+				<h1>MusicMap</h1>
+				<h2>by Vasyl Kochura</h2>
+			</header>
+
+			<section>
+				<p>
+					Explore the rise and fall of certain music genres over the last 75 years.
+				</p>
+
+				<p>
+					About the data source:
+					Discogs is an user-built database of music releases accessible for free. MusicMap is implemented using DiscogsAPI to ensure that the most up to date data is displayed.
+				</p>
+
+
+			</section>
+
+			<section>
+
+				<div class="statistic">
+					<h3>Total releases<small> as of <span class="last-updated" data-format="MMM Do, YYYY"></span></small></h3>
+					<div class="statistic-value total-deaths">
+						N/A
+					</div>
+				</div>
+			</section>
+
+			<footer>
+				<p>
+					Data Source: <a href="https://discogs.com/">Discogs API</a>
+				</p>
+
+				<p>
+					Copyright 2017 Vasyl Kochura
+				</p>
+			</footer>
+		</aside>
+
+		<main class="require-js">
+			<div id="map-container">
+				<div class="map-shadow-bottom"></div>
+			</div>
+
+			<div id="timeline-container"></div>
+		</main>
+
+		<main class="no-js">
+			<div>
+
+				<noscript>
+					<p>You currently do not have Javascript enabled.</p>
+				</noscript>
+			</div>
+		</main>
+	</body>
+</html>

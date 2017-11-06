@@ -1,23 +1,17 @@
 <!DOCTYPE html>
-      <html>
-      <head>
-        <link rel="stylesheet" href="style.css">
-        <link rel="shortcut icon" href="">
-
-      </head>
-
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="">
+</head>
 
 
 	<header>
 		<h1>VASYLKOCHURA</h1>
 	</header>
 
-
-
     <p>
-      <button id="Work">Work</button>
-      <button id="Background">Background</button>
-      <button id="Contact">Contact</button>
+      <a href="musicmap.html"><button>MusicMap</button></a>
     </p>
 
 
@@ -31,12 +25,35 @@
 
 
 <script src="https://d3js.org/d3.v4.min.js"></script>
-<script>
-  var data= d3.csv("datatest.csv", function(data) {
-  console.log(data[0]);
 
+<script>
+
+  d3.csv("datatest.csv", function(error,data) {
   console.log(data);
-});
+  });
+
+  //
+  // var headers = {
+  //     'User-Agent':       'MusicMap',
+  //     'Content-Type':     'application/json',
+  //     'username':         'MRLibrary',
+  //     'password':         'musicforlife'
+  // }
+
+  //Discogs Response function
+    var url = "https://api.discogs.com/database/search?query=davis&genre=jazz&decade=1960&page=1&per_page=100&key=TQHGkEnMvYKppvHPvbQp&secret=jWyPLjehJwYDTrBTIWpeyFHMzsRRTFNX";
+    d3.json(url, function(error, data){
+      console.log(error, data)
+    })
+
+
+  function parse(d){
+        return {
+            year:+d.year,
+            count:+d.count.replace(',', '')
+        };
+    }
+
 
 
 </script>
