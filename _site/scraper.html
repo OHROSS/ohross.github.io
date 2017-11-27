@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8" />
+    <title> </title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+  </head>
+  <body>
+      <head>
+</head>
+<script>
+
+var country = "France";
+var queue = d3.queue();
+var years = d3.range(1960,1970)
+
+years.forEach(function(year){
+  queue.defer(d3.json, "https://api.discogs.com/database/search?type=release&genre=Jazz&country=France&year="+year+"&page=1&per_page=10&key=TQHGkEnMvYKppvHPvbQp&secret=jWyPLjehJwYDTrBTIWpeyFHMzsRRTFNX")
+
+})
+queue.awaitAll(function(err, data) {
+console.log(data[0].pagination.items);
+})
+</script>
+
+  </body>
+</html>
