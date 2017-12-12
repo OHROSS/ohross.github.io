@@ -1,0 +1,205 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:700);
+
+html {
+  background: url(lets_make_music-wallpaper-2160x1440_1-01.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+h1 {
+  letter-spacing: 5px;
+  font-size: 3em;
+
+}
+
+h2 {
+  letter-spacing: 5px;
+  font-size: 1.25em;
+    text-align: center;
+}
+
+body {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  line-height: 160%;
+  color: #808080;
+  font-size: 1.5em;
+}
+
+svg {
+	fill: #ff3300;
+  padding: 5px;
+}
+svg:hover {
+	color: #ff8200;
+}
+
+.xaxis{
+  stroke: 0px;
+
+}
+
+button{
+  font-family: 'Lato', sans-serif;
+  font-size: 2em;
+  background-color: #ff3300;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  outline-color:#808080;
+
+}
+
+.button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+
+#guitar{
+  min-height: 950px;
+  min-width: 900px;
+}
+#piano{
+  min-height: 950px;
+  min-width: 900px;
+}
+
+/* STRUCTURE */
+.line {
+  font-family: 'Lato', sans-serif;
+  fill: none;
+  stroke: #000;
+  stroke-width: 0px;
+    font-size: 16px;
+
+}
+
+#pagewrap {
+	padding: 5px;
+	width: 960px;
+	margin: 20px auto;
+}
+header {
+	height: 100px;
+	padding: 0 15px;
+    text-align: center;
+}
+#content {
+	width: 950px;
+	float: middle;
+	padding: 5px 15px;
+}
+
+#middle {
+	 /* Account for margins + border values */
+	float: middle;
+	padding: 5px 15px;
+	margin: 0px 5px 5px 5px;
+}
+
+#sidebar {
+	width: 270px;
+	padding: 5px 15px;
+	float: left;
+}
+footer {
+	clear: both;
+	padding: 0 15px;
+  float: middle;
+}
+
+/************************************************************************************
+MEDIA QUERIES
+*************************************************************************************/
+/* for 980px or less */
+@media screen and (max-width: 980px) {
+  h1 {
+    letter-spacing: 5px;
+		font-size: 2em;
+      text-align: center;
+	}
+	#pagewrap {
+		width: 94%;
+	}
+	#content {
+		width: 41%;
+		padding: 1% 4%;
+	}
+	#middle {
+		width: 41%;
+		padding: 1% 4%;
+		margin: 0px 0px 5px 5px;
+		float: middle;
+	}
+
+	#sidebar {
+		clear: both;
+		padding: 1% 4%;
+		width: auto;
+		float: none;
+	}
+
+	header, footer {
+		padding: 1% 4%;
+    float: middle;
+	}
+}
+
+/* for 700px or less */
+@media screen and (max-width: 600px) {
+  h1 {
+    letter-spacing: 5px;
+		font-size: 2em;
+      text-align: center;
+	}
+	#content {
+		width: auto;
+		float: none;
+	}
+
+	#middle {
+		width: auto;
+		float: none;
+		margin-left: 0px;
+	}
+
+	#sidebar {
+		width: auto;
+		float: none;
+	}
+
+}
+
+/* for 480px or less */
+@media screen and (max-width: 480px) {
+
+	header {
+		height: auto;
+      text-align: center;
+	}
+  h1 {
+    letter-spacing: 5px;
+		font-size: 2em;
+      text-align: center;
+	}
+	#sidebar {
+		display: none;
+	}
+
+}
+
+header, #content, #middle, #sidebar {
+	margin-bottom: 5px;
+    text-align: center;
+}
+
+#pagewrap, header, #content, #middle, #sidebar, footer {
+
+}
