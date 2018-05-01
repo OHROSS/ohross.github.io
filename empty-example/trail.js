@@ -94,6 +94,7 @@ function playSounds(time, playBackrate){
 
 function draw(){
 
+  frameRate(20);
   part.start();
   background(20);
   //console.log(part.partStep);
